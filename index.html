@@ -3,27 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KALINGA STORE</title>
+  <meta name="theme-color" content="#ff6f00" />
+  <meta name="description" content="KALINGA STORE - A powerful public app store made for games and apps with unlimited CDN & cloud.">
   <link rel="manifest" href="manifest.json" />
   <link rel="stylesheet" href="style.css" />
-  <script>
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("service-worker.js");
-    }
-  </script>
+  <link rel="icon" type="image/png" href="icons/icon-192.png" />
+  <title>KALINGA STORE</title>
 </head>
 <body>
   <header>
-    <h1>KALINGA STORE</h1>
-    <input type="text" placeholder="Search apps..." />
+    <div class="logo-title">
+      <img src="icons/icon-192.png" alt="Logo" class="logo" />
+      <h1>KALINGA STORE</h1>
+    </div>
+    <input type="text" id="search" placeholder="Search apps, games..." />
   </header>
+
+  <nav>
+    <button class="nav-btn">All</button>
+    <button class="nav-btn">Games</button>
+    <button class="nav-btn">Tools</button>
+    <button class="nav-btn">Top Rated</button>
+    <button class="nav-btn">Developer</button>
+  </nav>
+
   <main>
-    <section id="featured">Featured Apps</section>
-    <section id="top-rated">Top Rated</section>
-    <section id="categories">Categories</section>
+    <section class="featured">
+      <h2>🌟 Featured Apps</h2>
+      <div class="app-grid" id="featured-apps">
+        <!-- Featured apps will be loaded here -->
+      </div>
+    </section>
+
+    <section class="apps">
+      <h2>📱 All Apps</h2>
+      <div class="app-grid" id="all-apps">
+        <!-- All apps will be loaded here -->
+      </div>
+    </section>
   </main>
+
+  <section class="upload-section">
+    <h2>📤 Developer Upload</h2>
+    <form id="upload-form">
+      <input type="text" placeholder="App Name" required />
+      <input type="url" placeholder="APK File URL" required />
+      <textarea placeholder="Short Description"></textarea>
+      <button type="submit">Submit for Review</button>
+    </form>
+  </section>
+
   <footer>
-    <p>&copy; 2025 KALINGA STORE</p>
+    <p>&copy; 2025 KALINGA STORE • Built for gamers & devs • Offline-ready</p>
   </footer>
+
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log("✅ Service Worker Registered"))
+        .catch(err => console.error("❌ SW Error:", err));
+    }
+  </script>
 </body>
 </html>
