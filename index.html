@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KALINGA STORE</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js");
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>KALINGA STORE</h1>
+    <input type="text" placeholder="Search apps..." />
+  </header>
+  <main>
+    <section id="featured">Featured Apps</section>
+    <section id="top-rated">Top Rated</section>
+    <section id="categories">Categories</section>
+  </main>
+  <footer>
+    <p>&copy; 2025 KALINGA STORE</p>
+  </footer>
+</body>
+</html>
