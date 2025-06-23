@@ -1,11 +1,11 @@
-
 {
   "name": "KALINGA STORE",
-  "short_name": "Kalinga",
-  "start_url": "/",
+  "short_name": "KALINGA",
+  "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#e07a5f",
+  "theme_color": "#d64545",
   "icons": [
     {
       "src": "icons/icon-192.png",
