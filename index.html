@@ -1,69 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#ff6f00" />
-  <meta name="description" content="KALINGA STORE - A powerful public app store made for games and apps with unlimited CDN & cloud.">
+  <meta name="theme-color" content="#FF6F00" />
+  <title>KALINGA STORE</title>
   <link rel="manifest" href="manifest.json" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="icons/icon-192.png" />
-  <title>KALINGA STORE</title>
-</head>
-<body>
+</head><body>
   <header>
-    <div class="logo-title">
-      <img src="icons/icon-192.png" alt="Logo" class="logo" />
-      <h1>KALINGA STORE</h1>
+    <h1>KALINGA STORE</h1>
+    <input type="text" placeholder="Search apps & games..." id="searchInput" />
+  </header>  <nav>
+    <button onclick="filterCategory('all')">All</button>
+    <button onclick="filterCategory('games')">Games</button>
+    <button onclick="filterCategory('apps')">Apps</button>
+    <button onclick="filterCategory('top')">Top Rated</button>
+  </nav>  <section class="featured">
+    <h2>Featured</h2>
+    <div id="featuredApps" class="grid"></div>
+  </section>  <section class="top-rated">
+    <h2>Top Rated</h2>
+    <div id="topRatedApps" class="grid"></div>
+  </section>  <section class="developer-profile">
+    <h2>Developer Profiles</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>@MysticDev</h3>
+        <p>Creator of Mystic Realms</p>
+      </div>
+      <div class="card">
+        <h3>@SurvivorGames</h3>
+        <p>Focus on ultra-realistic survival games</p>
+      </div>
     </div>
-    <input type="text" id="search" placeholder="Search apps, games..." />
-  </header>
-
-  <nav>
-    <button class="nav-btn">All</button>
-    <button class="nav-btn">Games</button>
-    <button class="nav-btn">Tools</button>
-    <button class="nav-btn">Top Rated</button>
-    <button class="nav-btn">Developer</button>
-  </nav>
-
-  <main>
-    <section class="featured">
-      <h2>🌟 Featured Apps</h2>
-      <div class="app-grid" id="featured-apps">
-        <!-- Featured apps will be loaded here -->
-      </div>
-    </section>
-
-    <section class="apps">
-      <h2>📱 All Apps</h2>
-      <div class="app-grid" id="all-apps">
-        <!-- All apps will be loaded here -->
-      </div>
-    </section>
-  </main>
-
-  <section class="upload-section">
-    <h2>📤 Developer Upload</h2>
-    <form id="upload-form">
+  </section>  <section class="upload-app" id="upload">
+    <h2>Upload Your App</h2>
+    <form>
       <input type="text" placeholder="App Name" required />
-      <input type="url" placeholder="APK File URL" required />
-      <textarea placeholder="Short Description"></textarea>
-      <button type="submit">Submit for Review</button>
+      <input type="file" required />
+      <button type="submit">Request Upload</button>
     </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 KALINGA STORE • Built for gamers & devs • Offline-ready</p>
-  </footer>
-
-  <script src="app.js"></script>
-  <script>
+    <p class="note">All apps are manually reviewed before publishing.</p>
+  </section>  <footer>
+    <p>&copy; 2025 KALINGA STORE. All rights reserved.</p>
+  </footer>  <script src="app.js"></script>  <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('service-worker.js')
-        .then(() => console.log("✅ Service Worker Registered"))
-        .catch(err => console.error("❌ SW Error:", err));
+        .then(reg => console.log('Service Worker Registered', reg))
+        .catch(err => console.error('Service Worker Registration Failed', err));
     }
-  </script>
-</body>
-</html>
+  </script></body></html>
