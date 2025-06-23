@@ -1,28 +1,12 @@
+
 {
   "name": "KALINGA STORE",
-  "short_name": "KALINGA",
-  "description": "A powerful public app store for games and apps with strong CDN, unlimited hosting, and offline support.",
-  "start_url": "./index.html",
+  "short_name": "Kalinga",
+  "start_url": "/",
   "display": "standalone",
-  "background_color": "#1a1a1a",
-  "theme_color": "#ff6f00",
-  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#e07a5f",
   "icons": [
-    {
-      "src": "icons/icon-72.png",
-      "sizes": "72x72",
-      "type": "image/png"
-    },
-    {
-      "src": "icons/icon-96.png",
-      "sizes": "96x96",
-      "type": "image/png"
-    },
-    {
-      "src": "icons/icon-144.png",
-      "sizes": "144x144",
-      "type": "image/png"
-    },
     {
       "src": "icons/icon-192.png",
       "sizes": "192x192",

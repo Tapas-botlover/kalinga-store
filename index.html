@@ -1,51 +1,27 @@
-<!DOCTYPE html><html lang="en"><head>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#FF6F00" />
-  <title>KALINGA STORE</title>
   <link rel="manifest" href="manifest.json" />
   <link rel="stylesheet" href="style.css" />
-</head><body>
+  <title>KALINGA STORE</title>
+</head>
+<body>
   <header>
     <h1>KALINGA STORE</h1>
-    <input type="text" placeholder="Search apps & games..." id="searchInput" />
-  </header>  <nav>
-    <button onclick="filterCategory('all')">All</button>
-    <button onclick="filterCategory('games')">Games</button>
-    <button onclick="filterCategory('apps')">Apps</button>
-    <button onclick="filterCategory('top')">Top Rated</button>
-  </nav>  <section class="featured">
-    <h2>Featured</h2>
-    <div id="featuredApps" class="grid"></div>
-  </section>  <section class="top-rated">
-    <h2>Top Rated</h2>
-    <div id="topRatedApps" class="grid"></div>
-  </section>  <section class="developer-profile">
-    <h2>Developer Profiles</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>@MysticDev</h3>
-        <p>Creator of Mystic Realms</p>
-      </div>
-      <div class="card">
-        <h3>@SurvivorGames</h3>
-        <p>Focus on ultra-realistic survival games</p>
-      </div>
-    </div>
-  </section>  <section class="upload-app" id="upload">
-    <h2>Upload Your App</h2>
-    <form>
-      <input type="text" placeholder="App Name" required />
-      <input type="file" required />
-      <button type="submit">Request Upload</button>
-    </form>
-    <p class="note">All apps are manually reviewed before publishing.</p>
-  </section>  <footer>
-    <p>&copy; 2025 KALINGA STORE. All rights reserved.</p>
-  </footer>  <script src="app.js"></script>  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js')
-        .then(reg => console.log('Service Worker Registered', reg))
-        .catch(err => console.error('Service Worker Registration Failed', err));
-    }
-  </script></body></html>
+    <p>A Free and Powerful App Store for Everyone</p>
+  </header>
+  <main>
+    <section id="featured">
+      <h2>Featured Apps</h2>
+      <!-- App cards will be added here -->
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 KALINGA STORE</p>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
